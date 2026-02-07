@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PinShelf | Library Management System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">📚 PinShelf</div>
+      <div class="search-wrap">
+        <input id="searchInput" type="search" placeholder="Search books, genres, or authors" />
+      </div>
+      <button class="action-btn">+ Add Book</button>
+    </header>
+
+    <main>
+      <section class="filters">
+        <button class="pill active" data-filter="all">All</button>
+        <button class="pill" data-filter="Fiction">Fiction</button>
+        <button class="pill" data-filter="Science">Science</button>
+        <button class="pill" data-filter="History">History</button>
+        <button class="pill" data-filter="Technology">Technology</button>
+        <button class="pill" data-filter="Self-help">Self-help</button>
+      </section>
+
+      <section id="bookGrid" class="grid"></section>
+    </main>
+
+    <template id="bookCardTemplate">
+      <article class="card">
+        <div class="cover-wrap">
+          <img class="cover" alt="Book cover" />
+          <span class="status"></span>
+        </div>
+        <div class="content">
+          <h3 class="title"></h3>
+          <p class="meta"></p>
+          <p class="genre"></p>
+          <div class="stats">
+            <span class="rating"></span>
+            <span class="copies"></span>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
